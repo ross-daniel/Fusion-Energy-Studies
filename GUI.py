@@ -39,7 +39,6 @@ class GateWidget(tk.Canvas):
         print(f"Opening Gate Valve {self.gate_num}")
 
 
-
 class MainFrame(tk.Frame):
     def __init__(self, parent, num_chambers):
         super().__init__(parent)
@@ -57,6 +56,5 @@ class MainFrame(tk.Frame):
             # add a gate to the left of the chamber unless it's the last chamber
             if i < num_chambers - 1:
                 rectangle = GateWidget(self, i+1)
-                #rectangle = tk.Canvas(self, width=10, height=50, bg="gray", highlightthickness=0)
-                #self.gates.append(rectangle)
+                self.gates.append(rectangle)
                 rectangle.grid(row=i*2+1, column=0, padx=10, pady=10)

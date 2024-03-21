@@ -1,11 +1,12 @@
-import GUI as gui
-from GUI import MainFrame
-from GUI import ChamberWidget
-import snap7
+#import GUI as gui
+#from GUI import MainFrame
+#from GUI import ChamberWidget
+import PLC as plc
 
-root = gui.root
+#root = gui.root
 
 if __name__ == "__main__":
-    main_frame = MainFrame(root, 4)
-    main_frame.grid()
-    root.mainloop()
+    #main_frame = MainFrame(root, 2)
+    #main_frame.grid()
+    #root.mainloop()
+    plc.read_data(50)
